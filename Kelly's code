@@ -1,0 +1,53 @@
+ git add testfile.txt
+ # to add file to online git hub
+
+ /tmp/gen711_project_data/algae/fastqs
+ cp /tmp/gen711_project_data/fastp.sh ~/fastp.sh
+ chmod +x ~/fastp.sh
+mkdir trimmed_fastqs
+/fastp.sh 150 /tmp/gen711_project_data/algae/fastqs trimmed_fastqs
+conda activate qiime2-2022.8
+qiime tools import \
+   --type "SampleData[PairedEndSequencesWithQuality]"  \
+   --input-format CasavaOneEightSingleLanePerSampleDirFmt \
+   --input-path trimmed_fastqs\
+   --output-path data_file
+mkdir trimmed_output
+   qiime cutadapt trim-paired \
+    --i-demultiplexed-sequences gen711-final-project/qiime/trimmed_qiime.qza \
+    --p-cores 4 \
+    --p-front-f <the forward primer sequence> \
+    --p-front-r <the reverse primer sequence> \
+    --p-discard-untrimmed \
+    --p-match-adapter-wildcards \
+    --verbose \
+    --o-trimmed-sequences trimmed_output / trimmed_file_output.qza
+mkdir visualization_output
+qiime demux summarize \
+--i-data trimmed_output / trimmed_file_output.qza \
+--o-visualization  visualization_output / visualization_file.qzv 
+mkdir denoise_dir
+mkdir denoise_table
+mkdir denoise_rs
+qiime dada2 denoise-paired \
+    --i-demultiplexed-seqs qiime_out/${run}_demux_cutadapt.qza  \
+    --p-trunc-len-f ${trunclenf} \
+    --p-trunc-len-r ${trunclenr} \
+    --p-trim-left-f 0 \
+    --p-trim-left-r 0 \
+    --p-n-threads 4 \
+    --o-denoising-stats denoise_dir/denoising-stats.qza \
+    --o-table denoise_table/feature_table.qza \
+    --o-representative-sequences denoise_rs/rep-seqs.qza
+
+mkdir metatab
+mkdir visdata
+mkdir data_feature
+mkdir o_visual
+qiime metadata tabulate \
+    --m-input-file metatab/denoising-stats.qza \
+    --o-visualization visdata/denoising-stats.qzv
+
+qiime feature-table tabulate-seqs \
+        --i-data data_feature/rep-seqs.qza \
+        --o-visualization o_visual/rep-seqs.qzv
