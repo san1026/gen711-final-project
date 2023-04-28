@@ -13,10 +13,12 @@ qiime tools import \
  --type "SampleData[PairedEndSequencesWithQuality]" \
  --input-format CasavaOneEightSingleLanePerSampleDirFmt \
  --input-path trimmed_fastqs \
- --output-path gen711-final-project/qiime/raw_qiime1.qza \
+ --output-path github_project_directory/qiime/raw_qiime1.qza \
+
+ls -shS
 
 qiime cutadapt trim-paired \
- --i-demultiplexed-sequences gen711-final-project/qiime/raw_qiime1.qza \
+ --i-demultiplexed-sequences github_project_directory/qiime/raw_qiime1.qza \
  --p-cores 4 \
  --p-front-f AGGTGAAGTAAAAGGTTCWTACTTAAA \
  --p-front-f AGGTGAAGTTAAAGGTTCWTAYTTAAA \
@@ -26,27 +28,44 @@ qiime cutadapt trim-paired \
  --p-discard-untrimmed \
  --p-match-adapter-wildcards \
  --verbose \
- --o-trimmed-sequences gen711-final-project/qiime/trimmed_qiime.qza
+ --o-trimmed-sequences github_project_directory/qiime/trimmed_qiime.qza
 
 qiime demux summarize \
- --i-data gen711-final-project/qiime/trimmed_qiime.qza \
- --o-visualization gen711-final-project/qiime/trimmed_qiime.qzv
+ --i-data github_project_directory/qiime/trimmed_qiime.qza \
+ --o-visualization github_project_directory/qiime/trimmed_qiime.qzv
 
 qiime dada2 denoise-paired \
- --i-demultiplexed-seqs qiime_out/${run}_demux_cutadapt.qza  \
- --p-trunc-len-f ${trunclenf} \
- --p-trunc-len-r ${trunclenr} \
+ --i-demultiplexed-seqs github_project_directory/qiime/trimmed_qiime.qza  \
+ --p-trunc-len-f 180 \
+ --p-trunc-len-r 170 \
  --p-trim-left-f 0 \
  --p-trim-left-r 0 \
  --p-n-threads 4 \
- --o-denoising-stats gen711-final-project/qiime/denoising/denoising-stats.qza \
- --o-table ggen711-final-project/qiime/denoising/feature_table.qza \
- --o-representative-sequences gen711-final-project/qiime/denoising/rep-seqs.qza
+ --o-denoising-stats github_project_directory/qiime/denoising/denoising-stats.qza \
+ --o-table github_project_directory/qiime/denoising/feature_table.qza \
+ --o-representative-sequences github_project_directory/qiime/denoising/rep-seqs.qza
 
 qiime metadata tabulate \
- --m-input-file gen711-final-project/qiime/denoising/denoising-stats.qza \
- --o-visualization gen711-final-project/qiime/denoising/denoising-stats.qzv
+ --m-input-file github_project_directory/qiime/denoising/denoising-stats.qza \
+ --o-visualization github_project_directory/qiime/denoising/denoising-stats.qzv
 
 qiime feature-table tabulate-seqs \
- --i-data gen711-final-project/qiime/denoising/rep-seqs.qza \
- --o-visualization gen711-final-project/qiime/denoising/rep-seqs.qzv
+ --i-data github_project_directory/qiime/denoising/rep-seqs.qza \
+ --o-visualization github_project_directory/qiime/denoising/rep-seqs.qzv
+ 
+ qiime feature-classifier classify-consensus-vsearch \
+  --i-query github_project_directory/qiime/denoising/rep-seqs.qza \
+  --i-reference-reads /tmp/gen711_project_data/reference_databases/silva-138-99-seqs.qza \
+  --i-reference-taxonomy /tmp/gen711_project_data/reference_databases/silva-138-99-tax.qza \
+  --p-maxaccepts 10 \
+  --p-query-cov 0.80 \
+  --p-perc-identity 0.9 \
+  --p-threads 36 \
+  --o-classification github_project_directory/taxonomy/taxonomy.qza \
+  --o-search-results github_project_directory/taxonomy/taxonomy_results
+
+### Barplot 
+qiime taxa barplot \
+     --i-table github_project_directory/qiime/denoising/feature_table.qza \
+     --i-taxonomy github_project_directory/taxonomy/taxonomy.qza \
+     --o-visualization github_project_directory/taxonomy/my-barplot.qzv
