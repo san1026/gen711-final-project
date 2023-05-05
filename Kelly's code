@@ -67,3 +67,13 @@ qiime taxa barplot \
      --i-taxonomy taxonomy.qza \
      --o-visualization my-barplot.qzv
 
+qiime taxa barplot \
+     --i-table new_samples_table.qza \
+     --m-metadata-file /tmp/gen711_project_data/algae/metadata.tsv \
+     --i-taxonomy taxonomy.qza \
+     --o-visualization my-barplot1.qzv
+
+qiime feature-table filter-samples \
+  --i-table /home/users/kb1485/feature_table.qza \
+  --m-metadata-file /tmp/gen711_project_data/algae/metadata.tsv\
+  --o-filtered-table new_samples_table.qza
