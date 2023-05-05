@@ -55,17 +55,27 @@ qiime feature-table tabulate-seqs \
  
  qiime feature-classifier classify-consensus-vsearch \
   --i-query github_project_directory/qiime/denoising/rep-seqs.qza \
-  --i-reference-reads /tmp/gen711_project_data/reference_databases/silva-138-99-seqs.qza \
-  --i-reference-taxonomy /tmp/gen711_project_data/reference_databases/silva-138-99-tax.qza \
+  --i-reference-reads /tmp/gen711_project_data/algae/ref-reads.qza \
+  --i-reference-taxonomy /tmp/gen711_project_data/algae/ref-tax.qza \
   --p-maxaccepts 10 \
   --p-query-cov 0.80 \
   --p-perc-identity 0.9 \
   --p-threads 36 \
-  --o-classification github_project_directory/taxonomy/taxonomy.qza \
-  --o-search-results github_project_directory/taxonomy/taxonomy_results
+  --o-classification github_project_directory/taxonomy/taxonomy1.qza 
 
 ### Barplot 
 qiime taxa barplot \
      --i-table github_project_directory/qiime/denoising/feature_table.qza \
-     --i-taxonomy github_project_directory/taxonomy/taxonomy.qza \
+     --i-taxonomy github_project_directory/taxonomy/taxonomy1.qza \
+     --o-visualization github_project_directory/taxonomy/my-barplot.qzv
+
+qiime feature-table filter-samples \
+  --i-table github_project_directory/qiime/denoising/feature_table.qza \
+  --m-metadata-file github_project_directory/taxonomy/metadata.tsv \
+  --o-filtered-table github_project_directory/taxonomy/new_samples_table.qza
+
+qiime taxa barplot \
+     --i-table github_project_directory/taxonomy/new_samples_table.qza \
+     --m-metadata-file github_project_directory/taxonomy/metadata.tsv \
+     --i-taxonomy github_project_directory/taxonomy/taxonomy1.qza \
      --o-visualization github_project_directory/taxonomy/my-barplot.qzv
