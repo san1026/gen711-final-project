@@ -20,3 +20,6 @@ See our code files (located at the top of this repository) for a comprehensive b
 
 
 ## Results
+
+UrbanCat, Elevation, CatAreaSqKm, PctAg, InorgNWetDep.
+Latitude doesn't really have any big patterns, but it's fun to look at.
