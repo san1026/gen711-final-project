@@ -23,7 +23,7 @@ See our code files (located at the top of this repository) for a comprehensive b
 
 ![plot](Figures/Urban.png)
 
-![plot](Figures/Stress levels.png)
+![plot](Figures/Stress_levels.png)
 
 UrbanCat, DistCat, Elevation, CatAreaSqKm, PctAg, InorgNWetDep.
 Latitude doesn't really have any big patterns, but it's fun to look at.
