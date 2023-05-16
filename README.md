@@ -23,7 +23,24 @@ See our code files (located at the top of this repository) for a comprehensive b
 
 ![plot](Figures/Urban.png)
 
+Medium %urban = more prominent maroon + blue
+High %urban = more prominent pink
+Medium/high = more prominent lavender; more identifiable species
+Peach seems to be across the board
+
+
 ![plot](Figures/Stresslevels.png)
+
+Higher stress = more identifiable species
+HighStr = more prominent peach
+More/better data seems to be required to accurately compare percentages of most of the other colors between HighStr & BestRef
+
+
+![plot](Figures/Agriculture.png)
+
+Higher %ag = more prominent lavender + maroon
+Higher %ag = more identifiable species
+Lower %ag generally = more prominent pink, but not always
 
 UrbanCat, DistCat, Elevation, CatAreaSqKm, PctAg, InorgNWetDep.
 Latitude doesn't really have any big patterns, but it's fun to look at.
