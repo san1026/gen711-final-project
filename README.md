@@ -22,6 +22,7 @@ See our code files (located at the top of this repository) for a comprehensive b
 ## Results
 
 ![plot](Figures/Stresslevels.png)
+
 Figure 1. Relative percent frequencies of diatom species (Tapolczai _et al._ 2019) in locations under different levels of stress. Created with qiime in Visual Studio Code.
 
 Higher stress = more identifiable species
@@ -30,6 +31,7 @@ More/better data seems to be required to accurately compare percentages of most 
 
 
 ![plot](Figures/Urban.png)
+
 Figure 2. Relative percent frequencies of diatom species (Tapolczai _et al._ 2019) in locations with differing levels of urban character. Created with qiime in Visual Studio Code.
 
 Medium %urban = more prominent maroon + blue
@@ -39,6 +41,7 @@ Peach seems to be across the board
 
 
 ![plot](Figures/Agriculture.png)
+
 Figure 3. Relative percent frequencies of diatom species (Tapolczai _et al._ 2019) in locations with differing levels of agricultural character. Created with qiime in Visual Studio Code.
 
 Higher %ag = more prominent lavender + maroon
