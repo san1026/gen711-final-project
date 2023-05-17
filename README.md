@@ -25,7 +25,7 @@ See our code files (located at the top of this repository) for a comprehensive b
 
 Figure 1. Relative percent frequencies of diatom species (Tapolczai _et al._ 2019) in locations under different levels of stress. Created with qiime in Visual Studio Code.
 
-In locations where stressors are present (HighStr, SomeStr, Str), there is a larger percentage of identifiable species compared to locations with minimal stressors (BestRef). Unidentifiable species are denoted in green. Particularly, there is a larger percentage of _Cocconeis placentula_ (denoted in peach) in higher-stress areas compared to in BestRef. Due to the large percentages of unassigned data in the BestRef regions, it is likely that more or higher-quality data is required to accurately compare percent abundances of most other species betwen HighStr and BestRef.
+In locations where stressors are present (HighStr, SomeStr, Str), there is a larger percentage of identifiable species compared to locations with minimal stressors (BestRef). Unidentifiable/unassigned sequences are denoted in green. Particularly, there is a larger percentage of _Cocconeis placentula_ (denoted in peach) in higher-stress areas compared to in BestRef. Due to the large percentages of unassigned data in the BestRef regions, it is likely that more or higher-quality data is required to accurately compare percent abundances of most other species betwen HighStr and BestRef.
 
 
 ![plot](Figures/Urban.png)
