@@ -32,10 +32,7 @@ In locations where stressors are present (HighStr, SomeStr, Str), there is a lar
 
 Figure 2. Relative percent frequencies of diatom species (Tapolczai _et al._ 2019) in locations with differing levels of urban character. Created with qiime in Visual Studio Code.
 
-Medium %urban = more prominent maroon + blue
-High %urban = more prominent pink
-Medium/high = more prominent lavender; more identifiable species
-Peach seems to be across the board
+In more urban locations, there is a larger percentage of identifiable species compard to less urban locations; this corresponds to a general trend of higher species diversity in more urban locations. Particularly, there is a larger percentage of species in the _Achnanthidiaceae_ family (denoted in magenta and lavender) in more urban locations. In locations with medium urban character, there is a greater abundance of species in the _Melosira_ and _Gomphonema_ genii (denoted in maroon and blue respectively) than in both lowly and highly urban areas.
 
 
 ![plot](Figures/Agriculture.png)
