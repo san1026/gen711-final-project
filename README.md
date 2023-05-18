@@ -1,4 +1,4 @@
-# gen711-final-project-algae-sarah-and-kelly
+# Gen711 Final Diatoms Project
 
 Sarah Nicholls and Kelly Birkenmeier
 
