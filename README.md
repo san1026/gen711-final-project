@@ -8,10 +8,10 @@ Kelly Birkenmeier
 team algae woot
 
 ## Background
+Diatoms are a type of photosythesizing algae. They are found in most environments that are moist, including fresh water, salt water, and soil. Diatoms have a variety of uses in filters, paints, and toothpaste among many other things. Typically, diatoms have a range of 20-200 microns in length, but they can occasionally get up to 2 millimeters. There are many different factors that effect the growth of diatoms. Some environmental factors that affect the growth of algae include metals, pH, UV stress, and nutrient availability as noted in the article by Gauthier, Senhorinho, and Scott. Of the factors mentioned above, sality and nutrient avaibility are two of the most common.
 
 ## Methods
 The rbCl sequences of Tapolczai _et al._ (2019) were downloaded in fastq format into the Visual Studio Code application. Our analysis took place on the University of New Hampshire RON cluster loaded with several conda environments.
-
 In the conda "genomics" environment, we ran fastp on the fastq files to trim off the poly-G tails added during novaseq. 
 
 We then entered the conda "qiime-2-2021.4" environment to convert the fastqs into a qza file, then remove the primers and adaptors from the sequences. The sequences were then denoised using the R package dada2 in order to decrease the amount of sequencing errors in the files. Finally, the sequences were compared to reference taxonomy barcodes by Rimet _et al._ (2019) in order to identify the species from which the experimental reads came. This data was converted into a qzv barplot for easy viewing on the qiimeview website. Background information about the algae samples was incorporated into the barplot using a metadata file.
@@ -46,3 +46,7 @@ In locations with higher agricultural character, there is a larger percentage of
 Rimet F., Gusev E., Kahlert M., Kelly M., Kulikovskiy M., Maltsev Y., Mann D., Pfannkuchen M., Trobajo R., Vasselon V., Zimmermann J., Bouchez A. Diat.barcode, an open-access curated barcode library for diatoms. Scientific Reports. 2019. https://www.nature.com/articles/s41598-019-51500-6.
 
 Tapolczai K., Keck F., Bouchez A., Rimet F., Kahlert M., Vasselon V. Diatom DNA Metabarcoding for Biomonitoring: Strategies to Avoid Major Taxonomical and Bioinformatical Biases Limiting Molecular Indices Capacities. Ecology and Evolution. 2019;7. https://doi.org/10.3389/fevo.2019.00409.
+e
+Gauthier MR, Senhorinho GNA, Scott JA. 2020. Microalgae under environmental stress as a source of antioxidants. Algal Research. 52:102104. doi:https://doi.org/10.1016/j.algal.2020.102104.
+‌Diatoms. 2019. Uclacuk. https://www.ucl.ac.uk/GeolSci/micropal/diatom.html.
+‌
