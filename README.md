@@ -3,11 +3,11 @@
 Sarah Nicholls and Kelly Birkenmeier
 
 ## Background
+This study used metabarcoding to examine the relative frequencies of diatom species present in various sampling locations. Each sampling location was classified according to three variables: general stressors present, urban character, and agricultural character. 
+
 Diatoms are a type of photosynthesizing algae endemic to most environments that are moist, including fresh water, salt water, and soil. Diatoms have a variety of uses in filters, paints, and toothpaste, among many other things. Typically, diatoms have a range of 20-200 microns in length, but they can occasionally grow up to 2 millimeters. There are many different factors that affect the growth of diatoms. Some environmental factors that affect the growth of algae include metals, pH, UV stress, and nutrient availability (Gauthier _et al._ 2020). Of the factors mentioned above, salinity and nutrient availability are two of the most common. The types and concentrations of stressors will vary depending on the environment; for example, proximity to an urban center.
 
 Metabarcoding is an identification technique that allows taxa to be identified from large environmental samples by analysis of DNA barcodes, or short sequences of nucleotides from a handful of genes. After the environmental samples are sequenced using high-throughput sequencing technology, they can be analyzed using bioinformatics to determine the identities and relative abundances of the species in the sample (What is Metabarcoding). One of the ways metabarcoding is useful is the classification and characterization of biodiverse environments. 
-
-This study used metabarcoding to examine the relative frequencies of diatom species present in various sampling locations. Each sampling location was classified according to three variables: general stressors present, urban character, and agricultural character. 
 
 ## Methods
 The rbCl sequences of Tapolczai _et al._ (2019) were downloaded in fastq format into the Visual Studio Code application. Our analysis took place on the University of New Hampshire RON cluster loaded with several conda environments.
