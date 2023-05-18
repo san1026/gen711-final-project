@@ -43,10 +43,11 @@ In locations with higher agricultural character, there is a larger percentage of
 
 ## References
 
+Diatoms. 2019. Uclacuk. https://www.ucl.ac.uk/GeolSci/micropal/diatom.html.
+
+Gauthier M.R., Senhorinho G.N.A., Scott J.A. 2020. Microalgae under environmental stress as a source of antioxidants. Algal Research. 52:102104. doi:https://doi.org/10.1016/j.algal.2020.102104.
+
 Rimet F., Gusev E., Kahlert M., Kelly M., Kulikovskiy M., Maltsev Y., Mann D., Pfannkuchen M., Trobajo R., Vasselon V., Zimmermann J., Bouchez A. Diat.barcode, an open-access curated barcode library for diatoms. Scientific Reports. 2019. https://www.nature.com/articles/s41598-019-51500-6.
 
 Tapolczai K., Keck F., Bouchez A., Rimet F., Kahlert M., Vasselon V. Diatom DNA Metabarcoding for Biomonitoring: Strategies to Avoid Major Taxonomical and Bioinformatical Biases Limiting Molecular Indices Capacities. Ecology and Evolution. 2019;7. https://doi.org/10.3389/fevo.2019.00409.
-e
-Gauthier MR, Senhorinho GNA, Scott JA. 2020. Microalgae under environmental stress as a source of antioxidants. Algal Research. 52:102104. doi:https://doi.org/10.1016/j.algal.2020.102104.
-‌Diatoms. 2019. Uclacuk. https://www.ucl.ac.uk/GeolSci/micropal/diatom.html.
 ‌
